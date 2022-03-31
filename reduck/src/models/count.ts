@@ -1,5 +1,5 @@
-import { model } from "@modern-js/runtime/model";
-
+import { model, createStore } from "@modern-js/runtime/model";
+import auto from "@modern-js-reduck/plugin-auto-actions";
 const countModel = model("count").define({
   state: {
     value: 1,
@@ -19,5 +19,8 @@ const countModel = model("count").define({
     },
   },
 });
-
+export const store = createStore({
+  // models: [countModel],
+  plugins: [auto],
+});
 export default countModel;
