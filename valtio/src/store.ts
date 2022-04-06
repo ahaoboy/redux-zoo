@@ -17,3 +17,7 @@ export const incAB = () => {
   store.counter.a++;
   store.counter.b++;
 };
+
+export const assign = () => {
+  store.counter = { a: 0, b: 1 };
+};

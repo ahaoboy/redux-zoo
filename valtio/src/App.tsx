@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { store, incA, incB, incAB } from "./store";
+import { store, incA, incB, incAB ,assign} from "./store";
 import { useSnapshot } from "valtio";
 
 function A() {
@@ -23,6 +23,7 @@ function C() {
       <button onClick={incA}>incA</button>
       <button onClick={incB}>incB</button>
       <button onClick={incAB}>incAB</button>
+      <button onClick={assign}>assign</button>
     </>
   );
 }
